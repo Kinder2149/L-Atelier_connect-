@@ -1,0 +1,184 @@
+<!-- 
+TEMPLATE EMAILJS POUR LA RÉCEPTION DES MESSAGES
+À copier dans EmailJS Dashboard > Email Templates > template_sbpae5f
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f7f5;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .email-header {
+            background: linear-gradient(135deg, #2a2520 0%, #3d3530 100%);
+            padding: 30px;
+            text-align: center;
+        }
+        .logo-circle {
+            width: 80px;
+            height: 80px;
+            background: #7ed957;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+        .email-header h1 {
+            color: #ffffff;
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .email-header p {
+            color: #d4a574;
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+        .email-body {
+            padding: 40px 30px;
+        }
+        .alert-box {
+            background: #d4edda;
+            border-left: 4px solid #7ed957;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .alert-box p {
+            margin: 0;
+            color: #155724;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        .info-section {
+            margin-bottom: 25px;
+        }
+        .info-label {
+            color: #6b6b6b;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        .info-value {
+            color: #2a2520;
+            font-size: 16px;
+            padding: 12px 15px;
+            background: #f8f7f5;
+            border-radius: 8px;
+            border-left: 3px solid #7ed957;
+        }
+        .message-box {
+            background: #f8f7f5;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 3px solid #d4a574;
+            margin-top: 20px;
+        }
+        .message-box p {
+            color: #2a2520;
+            line-height: 1.6;
+            margin: 0;
+            white-space: pre-wrap;
+        }
+        .divider {
+            height: 1px;
+            background: #e0e0e0;
+            margin: 30px 0;
+        }
+        .action-button {
+            display: inline-block;
+            background: #7ed957;
+            color: #2a2520;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        .email-footer {
+            background: #2a2520;
+            padding: 25px 30px;
+            text-align: center;
+        }
+        .email-footer p {
+            color: #d4a574;
+            margin: 5px 0;
+            font-size: 13px;
+        }
+        .email-footer .small {
+            color: #6b6b6b;
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <div class="logo-circle">🛠️</div>
+            <h1>L'Atelier Connecté</h1>
+            <p>Nouveau message de contact</p>
+        </div>
+        
+        <div class="email-body">
+            <div class="alert-box">
+                <p>📬 Vous avez reçu un nouveau message depuis votre site web</p>
+            </div>
+            
+            <div class="info-section">
+                <div class="info-label">Nom du contact</div>
+                <div class="info-value">{{from_name}}</div>
+            </div>
+            
+            <div class="info-section">
+                <div class="info-label">Email de contact</div>
+                <div class="info-value">
+                    <a href="mailto:{{from_email}}" style="color: #7ed957; text-decoration: none;">{{from_email}}</a>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <div class="info-label">Type de structure</div>
+                <div class="info-value">{{structure}}</div>
+            </div>
+            
+            <div class="info-section">
+                <div class="info-label">Besoin principal</div>
+                <div class="info-value">{{besoin}}</div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="info-label">Message</div>
+            <div class="message-box">
+                <p>{{message}}</p>
+            </div>
+            
+            <a href="mailto:{{from_email}}" class="action-button">Répondre directement</a>
+        </div>
+        
+        <div class="email-footer">
+            <p><strong>L'Atelier Connecté</strong></p>
+            <p>Simplifier le numérique des petites structures locales</p>
+            <p class="small">Message reçu le {{current_date}} via votre formulaire de contact</p>
+        </div>
+    </div>
+</body>
+</html>
