@@ -571,6 +571,25 @@ section {
 .contact-method-icon {
     font-size: 2rem;
     flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+.contact-method-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--text-dark);
+}
+
+.contact-method-icon-img img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
 }
 
 .contact-method h4 {
@@ -738,6 +757,12 @@ section {
 .social-links svg {
     width: 20px;
     height: 20px;
+}
+
+.social-link-img img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
 }
 
 .footer-bottom {
