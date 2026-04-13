@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    const animatedElements = document.querySelectorAll('.service-card, .feature-card, .pricing-card, .contact-method');
+    const animatedElements = document.querySelectorAll('.service-card, .feature-card, .tarif-card, .contact-method');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
