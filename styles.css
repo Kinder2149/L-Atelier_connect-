@@ -772,6 +772,266 @@ section {
     color: var(--text-gray);
 }
 
+/* ── Hero targets ──────────────────────────────── */
+.hero-targets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease 0.5s both;
+}
+
+.hero-targets span {
+    background: rgba(126, 217, 87, 0.12);
+    border: 1px solid rgba(126, 217, 87, 0.35);
+    color: var(--primary-color);
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+/* ── Cas concret ───────────────────────────────── */
+.cas-concret {
+    background: white;
+}
+
+.case-study-card {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 30px;
+    align-items: start;
+    background: var(--light-bg);
+    border-radius: var(--border-radius);
+    padding: 40px;
+}
+
+.case-study-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.case-study-arrow svg {
+    width: 40px;
+    height: 40px;
+    stroke: var(--primary-color);
+}
+
+.case-badge {
+    display: inline-block;
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.before-badge {
+    background: #ffe0e0;
+    color: #c0392b;
+}
+
+.after-badge {
+    background: #d4edda;
+    color: #155724;
+}
+
+.case-study-col h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.case-context {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.case-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.case-list li {
+    padding: 8px 0 8px 25px;
+    position: relative;
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.case-list-before li::before {
+    content: '✗';
+    position: absolute;
+    left: 0;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.case-list-after li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.case-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.case-results span {
+    background: var(--primary-color);
+    color: var(--text-dark);
+    padding: 5px 14px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.case-disclaimer {
+    text-align: center;
+    color: var(--text-gray);
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-top: 25px;
+}
+
+/* ── Tarifs ────────────────────────────────────── */
+.tarifs {
+    background: var(--light-bg);
+}
+
+.tarifs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.tarif-card {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: var(--transition);
+}
+
+.tarif-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.tarif-card-featured {
+    border: 2px solid var(--primary-color);
+}
+
+.tarif-header {
+    background: linear-gradient(135deg, var(--dark-bg), var(--dark-wood));
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.tarif-icon {
+    font-size: 2rem;
+}
+
+.tarif-header h3 {
+    font-size: 1.4rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.tarif-options {
+    padding: 20px 30px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarif-option {
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.tarif-option:last-child {
+    border-bottom: none;
+}
+
+.tarif-option-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.tarif-name {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.tarif-price {
+    color: var(--primary-dark);
+    font-size: 0.95rem;
+}
+
+.tarif-price strong {
+    color: var(--primary-dark);
+    font-size: 1.05rem;
+}
+
+.tarif-detail {
+    font-size: 0.82rem;
+    color: var(--text-gray);
+    display: block;
+}
+
+/* ── Offre de lancement ────────────────────────── */
+.lancement-offre {
+    background: linear-gradient(135deg, var(--dark-bg), var(--dark-wood));
+    border-radius: var(--border-radius);
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid var(--primary-color);
+}
+
+.lancement-badge {
+    background: var(--primary-color);
+    color: var(--text-dark);
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.lancement-offre p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+.lancement-offre p strong {
+    color: var(--primary-color);
+}
+
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -886,6 +1146,30 @@ section {
 
     .pricing-grid {
         grid-template-columns: 1fr;
+    }
+
+    .case-study-card {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+
+    .case-study-arrow {
+        padding-top: 0;
+        transform: rotate(90deg);
+    }
+
+    .tarifs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tarif-option-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .lancement-offre {
+        padding: 25px;
     }
 
     .contact-content {
