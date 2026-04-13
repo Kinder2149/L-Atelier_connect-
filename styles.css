@@ -1032,6 +1032,76 @@ section {
     color: var(--primary-color);
 }
 
+/* ── Processus 3 étapes ────────────────────────── */
+.processus {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 35px 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.processus-step {
+    flex: 1;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.processus-num {
+    width: 42px;
+    height: 42px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    flex-shrink: 0;
+}
+
+.processus-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-dark);
+}
+
+.processus-content p {
+    font-size: 0.88rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.processus-arrow {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    padding-top: 12px;
+    flex-shrink: 0;
+}
+
+/* ── CTA sur les cartes service ────────────────── */
+.service-cta {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--primary-dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: var(--transition);
+    border-bottom: 1px solid transparent;
+}
+
+.service-cta:hover {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -1170,6 +1240,18 @@ section {
 
     .lancement-offre {
         padding: 25px;
+    }
+
+    .processus {
+        flex-direction: column;
+        padding: 25px;
+        gap: 15px;
+    }
+
+    .processus-arrow {
+        transform: rotate(90deg);
+        align-self: center;
+        padding-top: 0;
     }
 
     .contact-content {
